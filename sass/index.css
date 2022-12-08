@@ -1,0 +1,302 @@
+.PageContainer {
+  height: auto;
+}
+
+.navbar {
+  border-bottom-left-radius: 10px !important;
+  border-bottom-right-radius: 10px !important;
+}
+.navbar a {
+  margin-left: 2em;
+}
+
+.navbar-brand {
+  @import url("https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@700&display=swap");
+  font-family: "Mountains of Christmas", cursive;
+  font-size: 1.5em !important;
+  color: rgb(211, 211, 211) !important;
+}
+
+.NavbarCart {
+  align-self: center;
+  margin-left: 50% !important;
+}
+.NavbarCart img {
+  width: 4em;
+}
+.NavbarCart .CartContador {
+  margin-top: 0.5em;
+  float: right;
+}
+
+body {
+  background-image: url("../Bgg.png");
+}
+
+.CarrouselContainer {
+  margin-top: 2em;
+}
+
+.Container1 {
+  background-color: none;
+  width: 100%;
+  height: 36em;
+  margin-top: 2em;
+  overflow: hidden;
+}
+.Container1 img {
+  display: block;
+  margin: auto;
+  max-width: 100%;
+  max-height: 55em;
+  -o-object-fit: cover;
+     object-fit: cover;
+  overflow: hidden;
+}
+
+.Container2 {
+  margin-top: 2em;
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  display: none;
+}
+.Container2 div {
+  margin: auto;
+}
+
+/* Tienda Section */
+.TiendaInner {
+  display: grid;
+  grid-template-columns: 80% 20%;
+}
+
+.ProductoPrecio {
+  background-image: url(../CartBg.png);
+  margin: auto;
+  margin-top: 3em;
+  margin-right: 5em;
+  height: auto;
+  width: 90%;
+  border: solid 2px black;
+  border-radius: 10px;
+}
+.ProductoPrecio h4 {
+  margin-top: 1em;
+  text-align: center;
+}
+.ProductoPrecio p {
+  text-align: center;
+}
+
+.PresTienda {
+  font-size: 3em;
+  text-align: center;
+  margin: auto;
+  margin-top: 0.5em;
+  width: 60%;
+}
+
+.Container1Tienda {
+  margin: auto;
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  background-color: none;
+  width: 100%;
+  height: 60em;
+  margin-top: 2em;
+  overflow: hidden;
+}
+.Container1Tienda img {
+  display: block;
+  margin: auto;
+  max-width: 100%;
+  max-height: 160%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  overflow: hidden;
+}
+
+.Producto {
+  background-color: rgb(227, 227, 227);
+  margin: auto;
+  width: 60%;
+  border: solid 1px black;
+  height: 24em;
+  margin-top: 4em;
+}
+.Producto .ProductoTitulo {
+  margin: auto;
+  margin-top: 0.5em;
+  width: 90%;
+  border: solid 1px black;
+  height: 3em;
+}
+.Producto .ProductoTitulo P {
+  text-align: center;
+  margin-top: 0.5em;
+}
+.Producto .ImgProducto {
+  margin: auto;
+  margin-top: 0.5em;
+  width: 90%;
+  border: solid 1px black;
+  height: 14em;
+}
+.Producto .ImgProducto img {
+  margin: auto;
+  width: 100%;
+  height: 13.9em;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.Producto .DetallesProducto {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  margin: auto;
+  margin-top: 0.5em;
+  width: 90%;
+  border: solid 1px black;
+  height: 4em;
+}
+.Producto .DetallesProducto .PrecioProducto {
+  border: solid 1px black;
+  width: 80%;
+  margin-top: 0.3em;
+  margin-left: 0.5em;
+  height: 80%;
+}
+.Producto .DetallesProducto .PrecioProducto p {
+  text-align: center;
+  margin-top: 0.5em;
+}
+.Producto .DetallesProducto .AgregarProducto {
+  border: solid 1px black;
+  width: 50%;
+  margin-top: 0.3em;
+  margin-left: 2.5em;
+  height: 80%;
+}
+.Producto .DetallesProducto .AgregarProducto .AgregarCarro {
+  display: block;
+  width: 80%;
+  margin: auto;
+  margin-top: 0.2em;
+  height: 2.5em;
+}
+
+.Descuento {
+  margin: auto;
+  margin-left: 3em;
+  width: 50%;
+  margin-bottom: 2em;
+}
+.Descuento .DescuentoAplicar {
+  width: 4em;
+  margin: auto;
+  margin-left: 3em;
+}
+
+/* End Tienda Section */
+/* About Section */
+.Container1about {
+  background-color: rgba(211, 211, 211, 0.3);
+  width: 100%;
+  height: 36em;
+  margin-top: 2em;
+  overflow: hidden;
+}
+.Container1about h2 {
+  font-size: 3em;
+  text-align: center;
+  width: 60%;
+  margin: auto;
+  margin-top: 0.2em;
+}
+.Container1about h5 {
+  width: 60%;
+  margin: auto;
+  margin-top: 2em;
+}
+.Container1about img {
+  display: block;
+  margin: auto;
+  max-width: 100%;
+  max-height: 160%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  overflow: hidden;
+}
+
+/* End About Section */
+/* Contact Section */
+.ConMensaje {
+  width: 80%;
+  margin: auto;
+  margin-top: 3em;
+}
+.ConMensaje h2 {
+  font-size: 3em;
+  text-align: center;
+}
+
+.ConForm .ConFormFields {
+  width: 60%;
+  margin: auto;
+  margin-top: 3em;
+}
+.ConForm .ConFormFields .TextInput {
+  display: block;
+  width: 50%;
+  margin: auto;
+}
+.ConForm .ConFormFields textarea {
+  display: block;
+  width: 50%;
+  margin: auto !important;
+  resize: none;
+}
+.ConForm .ConFormFields .SubmitButton {
+  border-radius: 3px;
+  border: solid 1px black;
+  background-color: rgb(218, 218, 218);
+  display: block;
+  width: 30%;
+  margin: auto;
+}
+
+/* End Contact Section */
+/*Footer Section*/
+.FooterSec1 {
+  border-right: solid 1px black;
+  width: 50%;
+}
+
+.FooterSec2 {
+  border: solid 2px black;
+  height: 90%;
+  overflow: hidden;
+}
+
+.FooterSec3 {
+  border-left: solid 1px black;
+}
+
+.footer {
+  font-size: 0.8em;
+  border: solid 2px black;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  display: grid;
+  grid-template-columns: 40% 20% 40%;
+  background-color: rgb(218, 218, 218);
+  height: 16em;
+  margin-top: 10em;
+}
+.footer div {
+  margin: auto;
+}
+.footer div ul li {
+  margin-top: 1em;
+}
+
+/*End Footer Section*//*# sourceMappingURL=index.css.map */

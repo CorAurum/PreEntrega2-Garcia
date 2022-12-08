@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Contacto - El Rincon del Lector</title>
+        <link rel="stylesheet" href="../sass/index.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <link rel="shortcut icon" href="../favicon.ico?v=1" type="image/x-icon" />
+    </head>
+
+    <body>
+
+<!--- Barra de navegacion Bootstrap  ------------------------------------------------------------------------------------------------->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+    <a class="navbar-brand" href="../index.html">El Rincon del Lector</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+            <a class="nav-item nav-link" href="shop.html">Tienda</a>
+            <a class="nav-item nav-link" href="about.html">Nosotros</a>
+            <a class="nav-item nav-link" href="contact.html">Contacto</a>
+        </div>
+      <a class="NavbarCart" href="cart.html"><img src="../Cart.png"><p class="CartContador" id="CartCont"></p></a>
+    </div>
+</nav>
+<!--- Fin Barra de navegacion Bootstrap  ------------------------------------------------------------------------------------------------->        
+
+        <div class="PageContainer">  
+            
+            <div class="Container1">
+
+                <div class="ConMensaje"><h2>Comunicate con nosotros</h2></div>
+                
+
+<!-- Formulario De Contacto----------------------------------------------------------------------------------------------------------->                
+                <div class="ConForm">
+
+                    <form class="ConFormFields" action="https://formsubmit.co/740d68aa3ce764d25e54e7da5b843b56" method="POST">
+                
+                        <input  class="TextInput" type="Email" name="Email"  placeholder="  Email" required
+                            oninvalid="this.setCustomValidity('Porfavor ingrese un email')"
+                            oninput="this.setCustomValidity('')" maxlength="100"><br>
+        
+                       <input class="TextInput" type="text" name="Asunto" placeholder="  Asunto" required
+                            oninvalid="this.setCustomValidity('Porfavor ingrese el asunto de su mensaje')"
+                            oninput="this.setCustomValidity('')" maxlength="300"><br>
+                        
+                        <textarea rows="7" cols="auto" name="Mensaje" placeholder=" Porfavor, ingrese su mensaje. " required 
+                            oninvalid="this.setCustomValidity('Porfavor, ingrese su mensaje.')"
+                            oninput="this.setCustomValidity('')" maxlength="2000"></textarea> <br>
+                        <input class="SubmitButton" type="submit" value="Enviar">        
+        
+                    </form>
+                  </div>
+<!-- Fin del Formulario De Contacto--------------------------------------------------------------------------------------------------->                   
+
+            </div>
+
+            <div class="Container2">
+                    
+            </div>
+
+<!-- Footer -------------------------------------------------------------------------------------------------------------------------->               
+<div class="footer">
+
+    <div class="FooterSec1">
+        <ul>
+            <li>Direccion placeholder</li>
+            <li>Horario placeholder</li>
+            <li>placeholder</li>
+        </ul>
+    </div>
+
+    <div class="FooterSec2">
+      <div class="mapouter"><div class="gmap_canvas"><iframe class="gmap_iframe" width="100%" frameborder="0" scrolling="no"
+       marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=200&amp;height=140&amp;hl=en&amp;q=libreria pocho 8 de octubre&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
+       </iframe><a href="https://formatjson.org/">format json</a></div><style>.mapouter{position:relative;text-align:right;width:100%;height:200px;}
+      .gmap_canvas {overflow:hidden;background:none!important;width:100%;height:200px;}.gmap_iframe {height:200px!important;}</style></div>
+    </div>    
+    
+    <div class="FooterSec3">
+        <ul>
+            <li>Facebook</li>
+            <li>Twitter</li>
+            <li>Instagram</li>
+        </ul>
+    </div>    
+
+</div>
+<!-- Fin Footer --------------------------------------------------------------------------------------------------------------------------> 
+
+            
+        </div>
+
+    </body>
+
+</html>
