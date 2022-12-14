@@ -114,7 +114,7 @@ function AddPro2() {
     document.getElementById("PrecioTotalCarro").innerHTML = PrecioCarro;
  }
 
-/* Fin de las Funciones que Agregan los productos seleccionados por el usuario al carro */ 
+/* Fin de las Funciones que agregan los productos seleccionados por el usuario al carro */ 
 
 
 /* Funcion que aplica el descuento */
