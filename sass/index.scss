@@ -32,7 +32,7 @@
 }
 
 body{
-    background-image: url("../Bgg.png");
+    background-image: url("../img/Bgg.png");
 }
 
 .CarrouselContainer {
@@ -74,9 +74,9 @@ body{
 }
 
 .ProductoPrecio {
-    background-image: url(../CartBg.png);
+    background-image: url(../img/CartBg.png);
     margin: auto;
-    margin-top: 3em;
+    margin-top: 0em;
     margin-right: 5em;
     height: auto;
     width: 90%;
@@ -103,8 +103,8 @@ body{
     display: grid;
     grid-template-columns: 33% 33% 33%;
     background-color: none;
-    width: 100%;
-    height: 60em;
+    width: 90%;
+    height: 100em;
     margin-top: 2em;
     overflow: hidden;
 
@@ -112,29 +112,34 @@ body{
         display: block;
         margin: auto;
         max-width:100%;
-        max-height:160%;    
+        max-height:100%;    
         object-fit: cover;
         overflow: hidden;
     }
 }
 
 .Producto {
-    background-color: rgb(227, 227, 227);
+    background-image: (url(../img/ProductoBG.png));
     margin: auto;
-    width: 60%;
-    border: solid 1px black;
-    height: 24em;
+    width: 70%;
+    border: solid 2px #32527b;
+    height: 38em;
     margin-top: 4em;
 
     .ProductoTitulo {
+        font-weight: bolder;
+        @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@800&family=Raleway&display=swap');
         margin: auto;
-        margin-top: 0.5em;
-        width: 90%;
-        border: solid 1px black;
-        height: 3em;
+        margin-top: 0em;
+        width: 80%;
+        height: 5em;
 
-        P{  text-align: center;
-            margin-top: 0.5em;}
+        P{  overflow: hidden;
+            text-overflow: ellipsis;
+            font-family: 'Nanum Gothic', sans-serif;
+            font-size: 1.4em;
+            text-align: center;
+            margin-top: 1em;}
 
     }
 
@@ -142,13 +147,15 @@ body{
         margin: auto;
         margin-top: 0.5em;
         width: 90%;
-        border: solid 1px black;
-        height: 14em;
+        border-radius: 10px;
+        border: solid 3px #32527b;
+        height: 25em;
+        overflow: hidden;
         
         img{
             margin: auto;
             width: 100%;
-            height: 13.9em;
+            height: auto;
              object-fit: cover;}
        
     }
@@ -156,35 +163,47 @@ body{
         display: grid;
         grid-template-columns: 50% 50%;
         margin: auto;
-        margin-top: 0.5em;
+        margin-top: 0.8em;
         width: 90%;
-        border: solid 1px black;
+        border-radius: 10px;
+        border: solid 2px #32527b;
         height: 4em;
 
         .PrecioProducto {
-            border: solid 1px black;
             width: 80%;
             margin-top: 0.3em;
             margin-left: 0.5em;
             height: 80%;
-            p{text-align: center;
-            margin-top: 0.5em;}
+            p{
+                font-size: 1.3em;
+                text-align: center;
+                margin-top: 0.4em;}
         }
 
         .AgregarProducto {
-            border: solid 1px black;
             width: 50%;
             margin-top: 0.3em;
             margin-left: 2.5em;
             height: 80%;
 
             .AgregarCarro {
+                border-radius: 10px;
+                background-color: rgb(230, 230, 230);
                 display: block;
-                width: 80%;
+                width: 100%;
                 margin: auto;
-                margin-top: 0.2em;
-                height: 2.5em;
-
+                margin-top: 0.1em;
+                height: 3em;
+                &:hover{
+                    background-color: rgb(201, 231, 246);
+                }
+                &:active{
+                    box-shadow: 2px 2px 2px black;
+                    img{
+                     width: 70%;
+                    }
+                }
+              
             }
 
         }
@@ -272,11 +291,12 @@ body{
             resize: none;
         }
         .SubmitButton {
+            height: 2.5em;
             border-radius: 3px;
             border: solid 1px black;
             background-color: rgb(218, 218, 218);
             display: block;
-            width: 30%;
+            width: 20%;
             margin: auto;
         }
     }
@@ -287,11 +307,13 @@ body{
 /*Footer Section*/
 
 .FooterSec1 {
+    @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+    font-weight: bolder;
     border-right: solid 1px black;
     width: 50%;
-    
+    font-size: 1.3em;
+    font-family: 'Raleway', sans-serif;
 }
-
 
 .FooterSec2 {
     border: solid 2px black;
@@ -302,20 +324,38 @@ body{
 
 .FooterSec3 {
     border-left: solid 1px black;
+    margin-left: 50%;
+    width: 50%;
+    height: 10.5em;
+    .SocialIcons {
+        width: 100%;
+        margin: auto;
+    ul { margin-top: 3.5em;   margin-left: 8em;
+        li { 
+            display: inline; 
+            img{
+                margin-left: 2em;
+                width: 18%;
+                
+            }
+        }
+    }
+}
 }
 
 .footer{ 
-    font-size: 0.8em;
+    font-size: 0.65em;
     border: solid 2px black;
     border-top-left-radius: 25px;
     border-top-right-radius: 25px;
     display: grid;
     grid-template-columns: 40% 20% 40%;
     background-color: rgb(218, 218, 218);
-    height: 16em;
+    height: 20em;
     margin-top: 10em;
     div {   margin: auto; 
     ul {
+        list-style-type: none;
         li {
         margin-top: 1em;
     }

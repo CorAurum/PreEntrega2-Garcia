@@ -8,10 +8,10 @@
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
         <link rel="shortcut icon" href="../favicon.ico?v=1" type="image/x-icon" />
-        <script src="../js/main.js"></script>
+    
     </head>
 
-    <body>
+    <body onload="MostrarCarro()">
 <!--- Barra de navegacion Bootstrap  ------------------------------------------------------------------------------------------------->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
             <a class="navbar-brand" href="../index.html">El Rincon del Lector</a>
@@ -24,7 +24,7 @@
                     <a class="nav-item nav-link" href="about.html">Nosotros</a>
                     <a class="nav-item nav-link" href="contact.html">Contacto</a>
                 </div>
-              <a class="NavbarCart" href="cart.html"><img src="../Cart.png"><p class="CartContador" id="CartCont"></p></a>
+              <a class="NavbarCart" href="cart.html"><img src="../img/icons/Cart.png"><p class="CartContador" id="CartCont"></p></a>
             </div>
         </nav>
 <!--- Fin Barra de navegacion Bootstrap  ------------------------------------------------------------------------------------------------->        
@@ -36,119 +36,119 @@
             <div class="TiendaInner">
 
 <!-- Seccion de Productos de la Tienda ---------------------------------------------------------------------------------------------->
-                    <div class="Container1Tienda">
-                
-                        <div class="Producto"> 
-                            
-                            <div class="ProductoTitulo"><P>Producto1</P></div>
-                            
-                            <div class="ImgProducto">
-                                <img src="https://via.placeholder.com/800x900?text=PLACEHOLDER"> 
-                            </div>
+    <div class="Container1Tienda">
 
-                            <div class="DetallesProducto">
-                                <div class="PrecioProducto"><p><span>100</span>$</p></div>
-                                <div class="AgregarProducto"><button class="AgregarCarro" onclick="AddPro1()"><img src="../Cart.png"></button></div>
-                            </div>
+        <div class="Producto"> 
+            
+            <div class="ProductoTitulo"><P>All Systems Red - Martha Wells</P></div>
+            
+            <div class="ImgProducto">
+                <img src="../front-covers/All systems red - The murderbot diaries - Martha wells.jpg"> 
+            </div>
 
-                        </div> 
+            <div class="DetallesProducto">
+                <div class="PrecioProducto"><p><span>100</span>$</p></div>
+                <div class="AgregarProducto"><button class="AgregarCarro AgregarCarroJS" onclick="MostrarCarro()" onclick="MostrarCarro()"><img src="../img/icons/Cart.png"></button></div>
+            </div>
 
-                        <div class="Producto"> 
-                            
-                            <div class="ProductoTitulo"><P>Producto2</P></div>
-                            
-                            <div class="ImgProducto">
-                                <img src="https://via.placeholder.com/800x900?text=PLACEHOLDER"> 
-                            </div>
+        </div> 
 
-                            <div class="DetallesProducto">
-                                <div class="PrecioProducto"><p>200$</p></div>
-                                <div class="AgregarProducto"><button class="AgregarCarro" onclick="AddPro2()"><img src="../Cart.png"></button></div>
-                            </div>
+        <div class="Producto"> 
+            
+            <div class="ProductoTitulo"><P>Kings of the wyld - Nicholas eames</P></div>
+            
+            <div class="ImgProducto">
+                <img src="../front-covers/Kings of the wyld - Nicholas eames.jpg"> 
+            </div>
 
-                        </div> 
+            <div class="DetallesProducto">
+                <div class="PrecioProducto"><p>200$</p></div>
+                <div class="AgregarProducto"><button class="AgregarCarro AgregarCarroJS" onclick="MostrarCarro()"><img src="../img/icons/Cart.png"></button></div>
+            </div>
 
-                        <div class="Producto"> 
-                            
-                            <div class="ProductoTitulo"><P>Producto3</P></div>
-                            
-                            <div class="ImgProducto">
-                                <img src="https://via.placeholder.com/800x900?text=PLACEHOLDER"> 
-                            </div>
+        </div> 
 
-                            <div class="DetallesProducto">
-                                <div class="PrecioProducto"><p>300$</p></div>
-                                <div class="AgregarProducto"><button class="AgregarCarro" onclick="AddPro3()"><img src="../Cart.png"></button></div>
-                            </div>
+        <div class="Producto"> 
+            
+            <div class="ProductoTitulo"><P>Clockwork boys - T.Kingfisher</P></div>
+            
+            <div class="ImgProducto">
+                <img src="../front-covers/Clockwork boys - Clocktaur war - T.Kingfisher.jpg"> 
+            </div>
 
-                        </div> 
+            <div class="DetallesProducto">
+                <div class="PrecioProducto"><p>300$</p></div>
+                <div class="AgregarProducto"><button class="AgregarCarro AgregarCarroJS" onclick="MostrarCarro()"><img src="../img/icons/Cart.png"></button></div>
+            </div>
 
-                        <div class="Producto"> 
-                            
-                            <div class="ProductoTitulo"><P>Producto4</P></div>
-                            
-                            <div class="ImgProducto">
-                                <img src="https://via.placeholder.com/800x900?text=PLACEHOLDER"> 
-                            </div>
+        </div> 
 
-                            <div class="DetallesProducto">
-                                <div class="PrecioProducto"><p>400$</p></div>
-                                <div class="AgregarProducto"><button class="AgregarCarro" onclick="AddPro4()"><img src="../Cart.png"></button></div>
-                            </div>
+        <div class="Producto"> 
+            
+            <div class="ProductoTitulo"><P>StormFront - Jim butcher</P></div>
+            
+            <div class="ImgProducto">
+                <img src="../front-covers/StormFront - Dresden files - Jim butcher.jpg"> 
+            </div>
 
-                        </div> 
+            <div class="DetallesProducto">
+                <div class="PrecioProducto"><p>400$</p></div>
+                <div class="AgregarProducto"><button class="AgregarCarro AgregarCarroJS" onclick="MostrarCarro()"><img src="../img/icons/Cart.png"></button></div>
+            </div>
 
-                        <div class="Producto"> 
-                            
-                            <div class="ProductoTitulo"><P>Producto5</P></div>
-                            
-                            <div class="ImgProducto">
-                                <img src="https://via.placeholder.com/800x900?text=PLACEHOLDER"> 
-                            </div>
+        </div> 
 
-                            <div class="DetallesProducto">
-                                <div class="PrecioProducto"><p>500$</p></div>
-                                <div class="AgregarProducto"><button class="AgregarCarro" onclick="AddPro5()"><img src="../Cart.png"></button></div>
-                            </div>
+        <div class="Producto"> 
+            
+            <div class="ProductoTitulo"><P>The Way of Kings - Brandon Sanderson</P></div>
+            
+            <div class="ImgProducto">
+                <img src="../front-covers/The Way of Kings - Stormlight Archive - Brandon Sanderson.jpg"> 
+            </div>
 
-                        </div> 
+            <div class="DetallesProducto">
+                <div class="PrecioProducto"><p>500$</p></div>
+                <div class="AgregarProducto"><button class="AgregarCarro AgregarCarroJS" onclick="MostrarCarro()"><img src="../img/icons/Cart.png"></button></div>
+            </div>
 
-                        <div class="Producto"> 
-                            
-                            <div class="ProductoTitulo"><P>Producto6</P></div>
-                            
-                            <div class="ImgProducto">
-                                <img src="https://via.placeholder.com/800x900?text=PLACEHOLDER"> 
-                            </div>
+        </div> 
 
-                            <div class="DetallesProducto">
-                                <div class="PrecioProducto"><p>600$</p></div>
-                                <div class="AgregarProducto"><button class="AgregarCarro" onclick="AddPro6()"><img src="../Cart.png"></button></div>
-                            </div>
+        <div class="Producto"> 
+            
+            <div class="ProductoTitulo"><P>Warbreaker - Brandon sanderson</P></div>
+            
+            <div class="ImgProducto">
+                <img src="../front-covers/Warbreaker - Brandon sanderson.jpg"> 
+            </div>
 
-                        </div>
-                    </div>
+            <div class="DetallesProducto">
+                <div class="PrecioProducto"><p>600$</p></div>
+                <div class="AgregarProducto"><button class="AgregarCarro AgregarCarroJS" onclick="MostrarCarro()"><img src="../img/icons/Cart.png"></button></div>
+            </div>
+
+        </div>
+    </div>
 <!-- Fin de la Seccion de Productos de la Tienda ------------------------------------------------------------------------------------>                    
 
 <!-- Seccion del carro de compras ---------------------------------------------------------------------------------------------------->
-                    <div class="ProductoPrecio">
-                    
-                        <h4>Carrito de Compras</h4></br>
+        <div class="ProductoPrecio">
+        
+            <h4>Carrito de Compras</h4></br>
 
-                        <p>Número de Productos Seleccionados: <span id="CartCont2">0</span></p>
+            <p>Número de Productos Seleccionados: <span id="CartCont2">0</span></p>
 
-                        <p>Copias de: <span id="">"Producto1"</span> seleccionadas: <span id="ProductoCont1">0</span></p>
-                        <p>Copias de: <span id="">"Producto2"</span> seleccionadas: <span id="ProductoCont2">0</span></p>
-                        <p>Copias de: <span id="">"Producto3"</span> seleccionadas: <span id="ProductoCont3">0</span></p>
-                        <p>Copias de: <span id="">"Producto4"</span> seleccionadas: <span id="ProductoCont4">0</span></p>
-                        <p>Copias de: <span id="">"Producto5"</span> seleccionadas: <span id="ProductoCont5">0</span></p>
-                        <p>Copias de: <span id="">"Producto6"</span> seleccionadas: <span id="ProductoCont6">0</span></p>
-                        
-                        <input type="textfield" class="Descuento" id="DescuentoInput" placeholder="Descuento = Desc"> <button class="DescuentoAplicar" onclick="Des()">✓</button>
+            <p>Copias de: <span id="">"Producto1"</span> seleccionadas: <span id="ProductoCont1">0</span></p>
+            <p>Copias de: <span id="">"Producto2"</span> seleccionadas: <span id="ProductoCont2">0</span></p>
+            <p>Copias de: <span id="">"Producto3"</span> seleccionadas: <span id="ProductoCont3">0</span></p>
+            <p>Copias de: <span id="">"Producto4"</span> seleccionadas: <span id="ProductoCont4">0</span></p>
+            <p>Copias de: <span id="">"Producto5"</span> seleccionadas: <span id="ProductoCont5">0</span></p>
+            <p>Copias de: <span id="">"Producto6"</span> seleccionadas: <span id="ProductoCont6">0</span></p>
+            
+            <input type="textfield" class="Descuento" id="DescuentoInput" placeholder="Descuento = Desc"> <button class="DescuentoAplicar" onclick="Des()">✓</button>
 
-                        <p>Costo Total: <span id="PrecioTotalCarro">0</span></p>
-                    
-                    </div>
+            <p>Costo Total: <span id="PrecioTotalCarro">0</span></p>
+        
+        </div>
 <!-- Fin de la Seccion del carro de compras ------------------------------------------------------------------------------------------>
             </div>
 
@@ -159,29 +159,30 @@
             </div>
 
 <!-- Footer -------------------------------------------------------------------------------------------------------------------------->               
+<script src="../js/main.js"></script>
 <div class="footer">
 
     <div class="FooterSec1">
         <ul>
-            <li>Direccion placeholder</li>
-            <li>Horario placeholder</li>
-            <li>placeholder</li>
+            <li>Avenida 18 de Julio 1308 Montevideo</li>
+            <li>Lunes a Viernes 9:00 - 20:00 <br> Sábado 10:00 - 18:00</li>
         </ul>
     </div>
 
     <div class="FooterSec2">
-      <div class="mapouter"><div class="gmap_canvas"><iframe class="gmap_iframe" width="100%" frameborder="0" scrolling="no"
-       marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=200&amp;height=140&amp;hl=en&amp;q=libreria pocho 8 de octubre&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
-       </iframe><a href="https://formatjson.org/">format json</a></div><style>.mapouter{position:relative;text-align:right;width:100%;height:200px;}
-      .gmap_canvas {overflow:hidden;background:none!important;width:100%;height:200px;}.gmap_iframe {height:200px!important;}</style></div>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2314.330444392965!2d-56.152372087918614!3d-34.882413461800304!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x959f80f0e81877bb%3A0xe4f9d11845494ca4!2sLibrer%C3%ADa%20Pocho!5e0!3m2!1ses-419!2suy!4v1671052055632!5m2!1ses-419!2suy"
+       width="350" height="200" style="border:0;" 
+      allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>    
     
     <div class="FooterSec3">
+      <div class="SocialIcons">
         <ul>
-            <li>Facebook</li>
-            <li>Twitter</li>
-            <li>Instagram</li>
+     <li><a href="https://www.facebook.com"><img src="../img/icons/facebook icon.png"></a></li>
+                        <li><a href="https://www.twitter.com"><img src="../img/icons/twitter icon.png"></a></li>
+                        <li><a href="https://www.instagram.com"><img src="../img/icons/instagram icon.png"></a></li>
         </ul>
+      </div>
     </div>    
 
 </div>

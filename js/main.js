@@ -1,146 +1,94 @@
 
-let ProCont=0;
+let Carro = document.querySelectorAll(".AgregarCarroJS");
 
-let PrecioCarro =0;
+console.log(Carro);
 
-let CantidadProductos =0;
+let Productos=[
 
-let CantidadProductos1 =0;
+    {
+        nombre: 'All Systems Red',
+        precio:100,
+        CopiasEnCarro:1
+    },
 
-let CantidadProductos2 =0;
+    {
+        nombre:'Kings of the wyld',
+        precio:200,
+        CopiasEnCarro:1
+    },
 
-let CantidadProductos3 =0;
+    {
+        nombre:'Clockwork boys',
+        precio:300,
+        CopiasEnCarro:1
+    },
 
-let CantidadProductos4 =0;
+    {
+        nombre:'StormFront',
+        precio:400,
+        CopiasEnCarro:1
+    },
 
-let CantidadProductos5 =0;
+    {
+        nombre:'The Way of Kings',
+        precio:500,
+        CopiasEnCarro:1
+    },
 
-let CantidadProductos6 =0;
+    {
+        nombre:'Warbreaker',
+        precio:600,
+        CopiasEnCarro:1
+    },
+]
 
-var PrecioProducto1 =100;
-
-var PrecioProducto2 =200;
-
-var PrecioProducto3 =300;
-
-var PrecioProducto4 =400;
-
-var PrecioProducto5 =500;
-
-var PrecioProducto6 =600;
-
-var DescuentoVar;
-
-var DescuentoPor = "1.2";
-
-
-/* Funciones que Agregan los productos seleccionados por el usuario al carro */
-
-function AddPro1() {
-
-   PrecioCarro += PrecioProducto1;
-  
-   CantidadProductos++;
-   CantidadProductos1++;
-
-   document.getElementById("CartCont").innerHTML = CantidadProductos;
-   document.getElementById("CartCont2").innerHTML = CantidadProductos;
-   document.getElementById("ProductoCont1").innerHTML = CantidadProductos1;
-   document.getElementById("PrecioTotalCarro").innerHTML = PrecioCarro;
-}
-
-function AddPro2() {
-
-    PrecioCarro += PrecioProducto2;
-   
-    CantidadProductos++;
-    CantidadProductos2++;
- 
-    document.getElementById("CartCont").innerHTML = CantidadProductos;
-    document.getElementById("CartCont2").innerHTML = CantidadProductos;
-    document.getElementById("ProductoCont2").innerHTML = CantidadProductos2;
-    document.getElementById("PrecioTotalCarro").innerHTML = PrecioCarro;
- }
-
- function AddPro3() {
-
-    PrecioCarro += PrecioProducto3;
-   
-    CantidadProductos++;
-    CantidadProductos3++;
- 
-    document.getElementById("CartCont").innerHTML = CantidadProductos;
-    document.getElementById("CartCont2").innerHTML = CantidadProductos;
-    document.getElementById("ProductoCont3").innerHTML = CantidadProductos3;
-    document.getElementById("PrecioTotalCarro").innerHTML = PrecioCarro;
- }
-
- function AddPro4() {
-
-    PrecioCarro += PrecioProducto4;
-   
-    CantidadProductos++;
-    CantidadProductos4++;
- 
-    document.getElementById("CartCont").innerHTML = CantidadProductos;
-    document.getElementById("CartCont2").innerHTML = CantidadProductos;
-    document.getElementById("ProductoCont4").innerHTML = CantidadProductos4;
-    document.getElementById("PrecioTotalCarro").innerHTML = PrecioCarro;
- }
-
- function AddPro5() {
-
-    PrecioCarro += PrecioProducto5;
-   
-    CantidadProductos++;
-    CantidadProductos5++;
- 
-    document.getElementById("CartCont").innerHTML = CantidadProductos;
-    document.getElementById("CartCont2").innerHTML = CantidadProductos;
-    document.getElementById("ProductoCont5").innerHTML = CantidadProductos5;
-    document.getElementById("PrecioTotalCarro").innerHTML = PrecioCarro;
- }
-
- function AddPro6() {
-
-    PrecioCarro += PrecioProducto6;
-   
-    CantidadProductos++;
-    CantidadProductos6++;
- 
-    document.getElementById("CartCont").innerHTML = CantidadProductos;
-    document.getElementById("CartCont2").innerHTML = CantidadProductos;
-    document.getElementById("ProductoCont6").innerHTML = CantidadProductos6;
-    document.getElementById("PrecioTotalCarro").innerHTML = PrecioCarro;
- }
-
-/* Fin de las Funciones que agregan los productos seleccionados por el usuario al carro */ 
+console.log(Productos);
 
 
-/* Funcion que aplica el descuento */
+for(let i=0;i<Carro.length;i++)
+{
 
-function Des() {
+    Carro[i].addEventListener('click', ()=>{
 
-    DescuentoVar = document.getElementById("DescuentoInput").value;
+        CostoTotal(Productos[i]);
+        CantidadCarro(Productos[i]);
+       
+    })
 
-
-    if ( DescuentoVar.includes("Desc") == true ) {
-        
-        document.getElementById("PrecioTotalCarro").innerHTML = PrecioCarro / DescuentoPor;
-
-      }
+    console.log(Productos[i]);
 
 }
-/* Fin de la Funcion que aplica el descuento */
+
+function CostoTotal(producto) {
 
 
+  let CostoEnCarro=localStorage.getItem('CostoTotal');
 
- /* Funcion experimental no aplicada aun.
+  if(CostoEnCarro!=null){
 
-function ShowCart(){
+        CostoEnCarro=parseInt(CostoEnCarro);
+        localStorage.setItem('CostoTotal',CostoEnCarro+producto.precio);
+  }else {
+    localStorage.setItem('CostoTotal', producto.precio);
+  }
+};
 
-    ProCont = window.localStorage.getItem("CantPro"); 
-    document.getElementById("CartCont").innerHTML = ProCont;
+function CantidadCarro(cantidad) {
+
+  let CantidadEnCarro=localStorage.getItem('CantidadCarro');
+
+  if(CantidadEnCarro!=null){
+
+        CantidadEnCarro=parseInt(CantidadEnCarro);
+        localStorage.setItem('CantidadCarro',CantidadEnCarro+cantidad.CopiasEnCarro);
+  }else {
+    localStorage.setItem('CantidadCarro', cantidad.CopiasEnCarro);
+  }
+};
+
+function MostrarCarro(){
+
+    ProCont = window.localStorage.getItem('CantidadCarro'); 
+    document.getElementById('CartCont').innerHTML = ProCont;
 
 }
-*/
