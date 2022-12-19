@@ -142,6 +142,76 @@ function ShowCart(){
     ProCont = window.localStorage.getItem("CantPro"); 
     document.getElementById("CartCont").innerHTML = ProCont;
 
+
+
+.CarroProductosContainer{
+   
+
+}
+.CarroProducto {
+    margin-top: 1em;
+    margin-left: 10%;
+    width: 70%;
+    display: flex;
+    justify-content: space-evenly;
+    div { 
+        display: flex;
+        width: 100%;
+
+    button {
+            border-radius: 60%;
+            cursor: pointer;
+            border: none;
+            width: 3em;
+            outline: none !important;
+        img {
+            width: 100%
+        }
+
+    }
+    }
+    img{
+
+        width: 6em;
+    }
+    p {
+        margin: auto;
+        margin-left: 0;
+        margin-right: 0;
+        
+    }
+}
+
+.CarroEliminarProducto {
+    margin-right: 5%;
+    border-radius: 60%;
+    cursor: pointer;
+    border: none;
+    outline: none !important;
+    img {
+        width: 3em;
+    }
+}
+
+.CarroDisminuirProducto {
+    margin-left: 16em;
+    img {
+        width: 85% !important;
+    }
+}
+
+.CarroPrecioProducto {
+    margin: 0;
+    margin-left: 16.5em !important;
+}
+
+.CarroProductoTotal {
+    margin-right: 9em !important;
+}
+
+
+
+
 }
 */
 

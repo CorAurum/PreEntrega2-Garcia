@@ -42,7 +42,7 @@ let Productos=[
     },
 ]
 
-console.log(Productos);
+
 
 
 for(let i=0;i<Carro.length;i++)
@@ -52,15 +52,31 @@ for(let i=0;i<Carro.length;i++)
 
         CostoTotal(Productos[i]);
         CantidadCarro(Productos[i]);
+        ProductosEnCarro(Productos[i])
+        AgregarProductos(Productos[i]);
        
-    })
+    })    
+};
 
-    console.log(Productos[i]);
+/* Funcion que suma la cantidad de unidades elegida por el cliente del producto seleccionado*/
 
-}
+function ProductosEnCarro(copias) {
 
+    let CopiasIndividualesEnCarro = localStorage.getItem('Copias '+copias.nombre);
+  
+    if(CopiasIndividualesEnCarro!=null){
+  
+        CopiasIndividualesEnCarro=parseInt(CopiasIndividualesEnCarro);
+          localStorage.setItem('Copias '+copias.nombre,CopiasIndividualesEnCarro+copias.CopiasEnCarro);
+    }else {
+      localStorage.setItem('Copias '+copias.nombre, copias.CopiasEnCarro);
+    }
+  
+  };
+
+
+/* Funcion que suma el valor total de todos los productos agregados al carro */  
 function CostoTotal(producto) {
-
 
   let CostoEnCarro=localStorage.getItem('CostoTotal');
 
@@ -73,6 +89,8 @@ function CostoTotal(producto) {
   }
 };
 
+/* Funcion que suma la cantidad total de todos los productos agregados al carro */  
+
 function CantidadCarro(cantidad) {
 
   let CantidadEnCarro=localStorage.getItem('CantidadCarro');
@@ -84,11 +102,33 @@ function CantidadCarro(cantidad) {
   }else {
     localStorage.setItem('CantidadCarro', cantidad.CopiasEnCarro);
   }
+
+  ProCont = window.localStorage.getItem('CantidadCarro'); 
+    document.getElementById('CartCont').innerHTML = ProCont;
+
 };
+
+/* Funcion que agregar el producto a las variables locales */
+
+function AgregarProductos(agregar) {
+
+ localStorage.setItem('ProductoEnCarro ' +agregar.nombre, JSON.stringify(agregar));
+
+};
+
+
+function MostrarProductosEnCarro(MostrarCarro) {
+
+    let InventarioCarro = local
+
+}
+
+
+/*Funcion que muestra el numero de productos en el carrito de compras del NavBar*/
 
 function MostrarCarro(){
 
     ProCont = window.localStorage.getItem('CantidadCarro'); 
     document.getElementById('CartCont').innerHTML = ProCont;
 
-}
+};
