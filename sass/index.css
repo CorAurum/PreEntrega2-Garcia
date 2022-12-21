@@ -288,7 +288,7 @@ body {
 .Container1Cart {
   background-color: rgba(211, 211, 211, 0.3);
   width: 100%;
-  height: 40em;
+  height: auto;
   max-height: auto;
   margin-top: 2em;
   overflow: hidden;
@@ -309,12 +309,14 @@ body {
   margin: auto;
   margin-top: 2em;
   width: 80%;
-  height: 13em;
+  height: auto;
   display: grid;
+  min-height: 30em;
   grid-template-columns: 10% 10% 20% 20% 20%;
 }
 .CarroProducto img {
   margin: auto;
+  margin-bottom: 1em;
   width: 70%;
 }
 .CarroProducto p {
@@ -332,6 +334,7 @@ body {
 }
 .CarroProducto div p {
   margin: auto;
+  margin-bottom: 1.5em;
 }
 .CarroProducto div button {
   height: auto;
