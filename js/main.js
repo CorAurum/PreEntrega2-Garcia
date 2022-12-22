@@ -133,7 +133,7 @@ function MostrarEnCarro() {
 
       ContenedorDeProductos.innerHTML += `
        
-              <button class="EliminarProductoCarro" onclick="BorrarProducto()" >
+              <button class="EliminarProductoCarro" onclick="" >
               <img src="../img/icons/delete.png">
             </button>
 
@@ -145,7 +145,7 @@ function MostrarEnCarro() {
 
             <div>
               <button onclick="DisminuirCarro()"><img src="../img/icons/minus.png"></button>
-              <p>${item.CopiasEnCarro}</p>
+              <p class="cantidadEnElCarro">${item.CopiasEnCarro}</p>
               <button class="AgregarUnidadJS" onclick="MostrarTotal()"><img src="../img/icons/plus.png"></button>
             </div>
             <p class="CarroProductoTotal">
@@ -161,7 +161,7 @@ function MostrarEnCarro() {
 function BorrarProducto() {
 
       let listaCarro = document.getElementsByClassName("NombreProducto");
-
+  
       let ItemsEnCarro = localStorage.getItem("ProductosEnCarro");
       ItemsEnCarro = JSON.parse(ItemsEnCarro);
 
@@ -173,30 +173,52 @@ function BorrarProducto() {
           console.log(listaCarro[index].innerHTML);
           delete ItemsEnCarro[listaCarro[index].innerHTML];
           localStorage.setItem("ProductosEnCarro", JSON.stringify(ItemsEnCarro));   
-          document.location.reload(true)
-
-        }
+          document.location.reload(true);
+      
+        };
       });
- }
+
+};
 
  /* Funcion que muestra el total del costo del carro sacando los valores de los productos y sumandolos para llegar a un total */
 
 function MostrarTotal(){
 
   let listaCarro = document.getElementsByClassName("CarroProductoTotal");
+  let listaUnidades = document.getElementsByClassName("cantidadEnElCarro");
 
   var TotalCosto = 0;
+  var Unidades = 0;
 
   for(var i=0;i<listaCarro.length;i++) {
 
         TotalCosto = TotalCosto + Number(listaCarro[i].innerHTML);
-      
+        Unidades = Unidades + Number(listaUnidades[i].innerHTML)
   }
   console.log(TotalCosto);
+  console.log(Unidades);
+  localStorage.setItem('CantidadCarro', Unidades);
 } 
 
-function MostrarCarro(){
 
+function ActualizarCarro() {
+
+    let listaUnidades = document.getElementsByClassName("cantidadEnElCarro");
+
+  var Unidades = 0;
+
+  for(var i=0;i<listaUnidades.length;i++) {
+
+        Unidades = Unidades + Number(listaUnidades[i].innerHTML);
+  }
+  localStorage.setItem('CantidadCarro', Unidades);
+  console.log(Unidades)
+}
+
+
+function MostrarCarro(){
+  
     ProCont = window.localStorage.getItem('CantidadCarro'); 
     document.getElementById('CartCont').innerHTML = ProCont;
+
 };
