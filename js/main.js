@@ -1,8 +1,6 @@
 
 let Carro = document.querySelectorAll(".AgregarCarroJS");
 
-console.log(Carro);
-
 let Productos=[
 
     {
@@ -48,7 +46,6 @@ let Productos=[
     },
 ];
 
-
 for(let i=0;i<Carro.length;i++)
 {
     Carro[i].addEventListener('click', ()=>{
@@ -60,7 +57,6 @@ for(let i=0;i<Carro.length;i++)
        
     })    
 };
-
 
 /* Funcion que suma el valor total de todos los productos agregados al carro */  
 
@@ -120,8 +116,7 @@ function MostrarProductosEnCarro(MostrarCarro) {
        [MostrarCarro.nombre]: MostrarCarro
      }
   }
-         localStorage.setItem("ProductosEnCarro", JSON.stringify(UnidadesEnCarro));
-         
+         localStorage.setItem("ProductosEnCarro", JSON.stringify(UnidadesEnCarro));    
 }; 
 
 /* muestra los productos en el carrito de compras */
@@ -131,51 +126,77 @@ function MostrarEnCarro() {
   ItemsEnCarro = JSON.parse(ItemsEnCarro);
   let ContenedorDeProductos = document.querySelector(".CarroProducto");
 
-  console.log(ItemsEnCarro);
-  if (ItemsEnCarro && ContenedorDeProductos) {
+   if (ItemsEnCarro && ContenedorDeProductos) {
 
     ContenedorDeProductos.innerHTML = '';
     Object.values(ItemsEnCarro).map(item => {
-      
 
       ContenedorDeProductos.innerHTML += `
-              
-              <button class="EliminarProductoCarro" onclick="BorrarProducto()">
+       
+              <button class="EliminarProductoCarro" onclick="BorrarProducto()" >
               <img src="../img/icons/delete.png">
             </button>
 
             <img src="../front-covers/${item.imagenURL}">
 
             <p>
-              ${item.precio}
+            <span class="NombreProducto">${item.nombre}</span>
             </p>
 
             <div>
-              <button><img src="../img/icons/minus.png"></button>
+              <button onclick="DisminuirCarro()"><img src="../img/icons/minus.png"></button>
               <p>${item.CopiasEnCarro}</p>
-              <button class="AgregarUnidadJS"><img src="../img/icons/plus.png"></button>
+              <button class="AgregarUnidadJS" onclick="MostrarTotal()"><img src="../img/icons/plus.png"></button>
             </div>
             <p class="CarroProductoTotal">
             ${item.precio * item.CopiasEnCarro}
-            </p>  `;
+            </p> 
+            `;
     });
-
   } 
 };
 
+/* Elimina el producto del carro de compras, de la variable local de productos y refresca la pagina para mostrar el carro actualizado. */
 
-/* Borra productos del carro */
+function BorrarProducto() {
 
-function EliminarProductosEnCarro() {
-  console.log("Borrado");
+      let listaCarro = document.getElementsByClassName("NombreProducto");
 
-}; 
+      let ItemsEnCarro = localStorage.getItem("ProductosEnCarro");
+      ItemsEnCarro = JSON.parse(ItemsEnCarro);
 
-/*Funcion que muestra el numero de productos en el carrito de compras del NavBar*/
+      document.querySelectorAll(".EliminarProductoCarro").forEach((EliminarProductoCarro, index) => {
+
+        EliminarProductoCarro.onclick = (event) => {
+
+          console.log("You clicked button number " + index);
+          console.log(listaCarro[index].innerHTML);
+          delete ItemsEnCarro[listaCarro[index].innerHTML];
+          localStorage.setItem("ProductosEnCarro", JSON.stringify(ItemsEnCarro));   
+          document.location.reload(true)
+
+        }
+      });
+ }
+
+ /* Funcion que muestra el total del costo del carro sacando los valores de los productos y sumandolos para llegar a un total */
+
+function MostrarTotal(){
+
+  let listaCarro = document.getElementsByClassName("CarroProductoTotal");
+
+  var TotalCosto = 0;
+
+  for(var i=0;i<listaCarro.length;i++) {
+
+        TotalCosto = TotalCosto + Number(listaCarro[i].innerHTML);
+      
+  }
+  console.log(TotalCosto);
+} 
 
 function MostrarCarro(){
 
     ProCont = window.localStorage.getItem('CantidadCarro'); 
     document.getElementById('CartCont').innerHTML = ProCont;
 };
-
