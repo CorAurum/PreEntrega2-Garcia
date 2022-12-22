@@ -144,9 +144,9 @@ function MostrarEnCarro() {
             </p>
 
             <div>
-              <button onclick="DisminuirCarro()"><img src="../img/icons/minus.png"></button>
+              <button class="RestarUnidadJS" onclick=""><img src="../img/icons/minus.png"></button>
               <p class="cantidadEnElCarro">${item.CopiasEnCarro}</p>
-              <button class="AgregarUnidadJS" onclick="MostrarTotal()"><img src="../img/icons/plus.png"></button>
+              <button class="AgregarUnidadJS" onclick=""><img src="../img/icons/plus.png"></button>
             </div>
             <p class="CarroProductoTotal">
             ${item.precio * item.CopiasEnCarro}
@@ -179,6 +179,44 @@ function BorrarProducto() {
       });
 
 };
+
+function AgregarUnidadCarro(){
+
+  let listaCarro = document.getElementsByClassName("AgregarUnidadJS");
+
+      let CarritoJS = localStorage.getItem("ProductosEnCarro");
+      CarritoJS = JSON.parse(CarritoJS);
+
+      document.querySelectorAll(".AgregarUnidadJS").forEach((AgregarUnidadJS, index) => {
+
+        AgregarUnidadJS.onclick = (event) => {
+
+          console.log("You clicked button number " + index);
+          CarritoJS[Object.keys(CarritoJS)[index]].CopiasEnCarro = CarritoJS[Object.keys(CarritoJS)[index]].CopiasEnCarro + 1;
+          localStorage.setItem("ProductosEnCarro", JSON.stringify(CarritoJS));   
+          document.location.reload(true);
+        };
+      });
+}
+
+function RestarUnidadCarro(){
+
+  let listaCarro = document.getElementsByClassName("RestarUnidadJS");
+
+      let CarritoJS = localStorage.getItem("ProductosEnCarro");
+      CarritoJS = JSON.parse(CarritoJS);
+
+      document.querySelectorAll(".RestarUnidadJS").forEach((RestarUnidadJS, index) => {
+
+        RestarUnidadJS.onclick = (event) => {
+
+          console.log("You clicked button number " + index);
+          CarritoJS[Object.keys(CarritoJS)[index]].CopiasEnCarro = CarritoJS[Object.keys(CarritoJS)[index]].CopiasEnCarro - 1;
+          localStorage.setItem("ProductosEnCarro", JSON.stringify(CarritoJS));   
+          document.location.reload(true);
+        };
+      });
+}
 
  /* Funcion que muestra el total del costo del carro sacando los valores de los productos y sumandolos para llegar a un total */
 
