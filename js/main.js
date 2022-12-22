@@ -209,11 +209,12 @@ function RestarUnidadCarro(){
       document.querySelectorAll(".RestarUnidadJS").forEach((RestarUnidadJS, index) => {
 
         RestarUnidadJS.onclick = (event) => {
-
+            if (CarritoJS[Object.keys(CarritoJS)[index]].CopiasEnCarro < 2) { } else { 
           console.log("You clicked button number " + index);
           CarritoJS[Object.keys(CarritoJS)[index]].CopiasEnCarro = CarritoJS[Object.keys(CarritoJS)[index]].CopiasEnCarro - 1;
           localStorage.setItem("ProductosEnCarro", JSON.stringify(CarritoJS));   
           document.location.reload(true);
+            };
         };
       });
 }
