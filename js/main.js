@@ -46,6 +46,9 @@ let Productos=[
     },
 ];
 
+console.log(Productos);
+
+
 for(let i=0;i<Carro.length;i++)
 {
     Carro[i].addEventListener('click', ()=>{
@@ -180,9 +183,9 @@ function BorrarProducto() {
 
 };
 
-function AgregarUnidadCarro(){
+/* Funcion que agrega unidades a los productos en el carro segun quiera el usuario */
 
-  let listaCarro = document.getElementsByClassName("AgregarUnidadJS");
+function AgregarUnidadCarro(){
 
       let CarritoJS = localStorage.getItem("ProductosEnCarro");
       CarritoJS = JSON.parse(CarritoJS);
@@ -197,7 +200,9 @@ function AgregarUnidadCarro(){
           document.location.reload(true);
         };
       });
-}
+};
+
+/* Funcion que resta unidades a los productos en el carro segun quiera el usuario */
 
 function RestarUnidadCarro(){
 
@@ -217,7 +222,7 @@ function RestarUnidadCarro(){
             };
         };
       });
-}
+};
 
  /* Funcion que muestra el total del costo del carro sacando los valores de los productos y sumandolos para llegar a un total */
 
@@ -237,8 +242,10 @@ function MostrarTotal(){
   console.log(TotalCosto);
   console.log(Unidades);
   localStorage.setItem('CantidadCarro', Unidades);
-} 
+};
 
+/* Funcion que se encarga de actualizar las cantidad de unidades en el carrito de compras en caso de que el usuario
+  modifique cuantas quiere en la seccion del carrito de compras */
 
 function ActualizarCarro() {
 
@@ -252,8 +259,29 @@ function ActualizarCarro() {
   }
   localStorage.setItem('CantidadCarro', Unidades);
   console.log(Unidades)
-}
+};
 
+/* Funcion que muestra los productos especificados por su nombre en la barra de busqueda de la Tienda */
+
+  const searchEl = document.querySelector('.BarraProducto');
+  const x = document.querySelectorAll('.ProductoTitulo p:nth-child(1)');
+  const nodelistToArray = Array.prototype.slice.call(x);
+  console.log(nodelistToArray);
+  
+
+  function search(e){
+    nodelistToArray.forEach((item,index) => {
+      if(!item.innerHTML.toLowerCase().includes(e.target.value)){
+        item.parentElement.parentElement.style.display = 'none';
+      }else {
+        item.parentElement.parentElement.style.display = 'block';
+      }
+    })
+  };
+  
+  searchEl.addEventListener("keyup", search);   
+
+/* Funcion que muestra las unidades en el carrito de compras de la navbar en las distintas secciones de la pagina */
 
 function MostrarCarro(){
   

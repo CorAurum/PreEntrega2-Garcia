@@ -210,17 +210,16 @@ body{
     }
 }
 
-.Descuento {
-    margin: auto;
-    margin-left: 3em;
-    width: 50%;
-    margin-bottom: 2em;
+.BarraBusqueda {
 
-    .DescuentoAplicar {
-        width: 4em;
+    button { 
         margin: auto;
-        margin-left: 3em;
+        width: 10%;
+        img {
+            width: 100%;
+        }
     }
+
 }
 
 /* End Tienda Section */
@@ -335,9 +334,9 @@ body{
     display: grid;
     min-height: 30em;
     grid-template-columns: 10% 10% 20% 20% 20%;
+    row-gap: 2em;
  img{
     margin: auto;
-    margin-bottom: 1em;
     width: 70%;
  }   
 
@@ -354,7 +353,7 @@ body{
     margin: auto;
     margin-left: 50%;
     justify-content: space-evenly;
-    p{margin: auto; margin-bottom: 1.5em;}
+    p{margin: auto;}
     button { 
         height: auto;
         width: auto;
@@ -413,7 +412,7 @@ button {
     width: 50%;
     height: 10.5em;
     .SocialIcons {
-        width: 100%;
+        width: 90%;
         margin: auto;
     ul { margin-top: 3.5em;   margin-left: 8em;
         li { 

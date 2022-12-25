@@ -202,16 +202,12 @@ body {
   width: 70%;
 }
 
-.Descuento {
+.BarraBusqueda button {
   margin: auto;
-  margin-left: 3em;
-  width: 50%;
-  margin-bottom: 2em;
+  width: 10%;
 }
-.Descuento .DescuentoAplicar {
-  width: 4em;
-  margin: auto;
-  margin-left: 3em;
+.BarraBusqueda button img {
+  width: 100%;
 }
 
 /* End Tienda Section */
@@ -313,10 +309,10 @@ body {
   display: grid;
   min-height: 30em;
   grid-template-columns: 10% 10% 20% 20% 20%;
+  row-gap: 2em;
 }
 .CarroProducto img {
   margin: auto;
-  margin-bottom: 1em;
   width: 70%;
 }
 .CarroProducto p {
@@ -334,7 +330,6 @@ body {
 }
 .CarroProducto div p {
   margin: auto;
-  margin-bottom: 1.5em;
 }
 .CarroProducto div button {
   height: auto;
@@ -387,7 +382,7 @@ body {
   height: 10.5em;
 }
 .FooterSec3 .SocialIcons {
-  width: 100%;
+  width: 90%;
   margin: auto;
 }
 .FooterSec3 .SocialIcons ul {
