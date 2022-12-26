@@ -218,7 +218,6 @@ function MostrarTotal(){
 
   let listaCarro = document.getElementsByClassName("CarroProductoTotal");
   let listaUnidades = document.getElementsByClassName("cantidadEnElCarro");
-  let totalFinal = localStorage.getItem('CostoTotal');
 
   var TotalCosto = 0;
   var Unidades = 0;
@@ -232,7 +231,7 @@ function MostrarTotal(){
   };
   localStorage.setItem('CostoTotal', TotalCosto);
   localStorage.setItem('CantidadCarro', Unidades);
-  document.getElementById('CosteFinalTotal').innerHTML = totalFinal+"$";
+  document.getElementById('CosteFinalTotal').innerHTML = TotalCosto+"$";
 };
 
 /* Funcion que muestra los productos especificados por su nombre en la barra de busqueda de la Tienda */
