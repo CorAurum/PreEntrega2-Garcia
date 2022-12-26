@@ -315,6 +315,12 @@ body{
     overflow: hidden;
 }
 
+.CarroProductosContainer {
+    display: grid;
+    grid-template-columns: 90% 10%;
+
+}
+
 .CarroHeader {
     margin-left: 10%;
     width: 70%;
@@ -326,14 +332,23 @@ body{
     }
 }
 
+.CosteFinalCarro {
+    margin:auto;
+    width: 100%;
+    p {
+        text-align: center;
+    }
+}
+
 .CarroProducto {
     margin: auto;
     margin-top: 2em;
+    margin-left: 13em;
     width: 80%;
     height: auto;
     display: grid;
     min-height: 30em;
-    grid-template-columns: 10% 10% 20% 20% 20%;
+    grid-template-columns: 10% 10% 20% 25% 22%;
     row-gap: 2em;
  img{
     margin: auto;

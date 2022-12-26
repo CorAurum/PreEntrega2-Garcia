@@ -11,7 +11,7 @@
         
     </head>
 
-    <body onload="MostrarEnCarro(); ActualizarCarro(); MostrarCarro(); BorrarProducto(); AgregarUnidadCarro(); RestarUnidadCarro();" >
+    <body onload="MostrarEnCarro(); BorrarProducto(); AgregarUnidadCarro(); RestarUnidadCarro(); MostrarTotal(); MostrarCarro();" >
 <!--- Barra de navegacion Bootstrap  ------------------------------------------------------------------------------------------------->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
     <a class="navbar-brand" href="../index.html">El Rincon del Lector</a>
@@ -30,39 +30,34 @@
 <!--- Fin Barra de navegacion Bootstrap  ------------------------------------------------------------------------------------------------->        
 
         <div class="PageContainer">
-     
             <div class="Container1Cart">
-
                 <div class="CarroHeader">
-                  
                   <h5>PRODUCTO</h5>
                   <h5>NOMBRE</h5>
                   <h5>CANTIDAD</h5>
                   <h5>TOTAL</h5>
-                  
                 </div>
 
                 <div class="CarroProductosContainer">
-                  
                   <div class="CarroProducto"> 
 
                   </div>
-                
+
+                  <div class="CosteFinalCarro">
+                      <span>Su Costo total es de:</span>
+                      <p id="CosteFinalTotal">0</p>
+                  </div>
                 </div>
+              </div>
 
+            <div class="Container2">   
             </div>
-
-            <div class="Container2">
-                    
-            </div>
-
 
 <script src="../js/main.js"></script>
 <script src="../js/cart.js"></script>
 
 <!-- Footer -------------------------------------------------------------------------------------------------------------------------->               
 <div class="footer">
-
     <div class="FooterSec1">
         <ul>
             <li>Avenida 18 de Julio 1308 Montevideo</li>
