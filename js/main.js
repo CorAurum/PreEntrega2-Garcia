@@ -1,56 +1,119 @@
-
-let Carro = document.querySelectorAll(".AgregarCarroJS");
-
 let Productos=[
 
-    {
-        nombre: 'All Systems Red',
-        precio:100,
-        CopiasEnCarro:0,
-        imagenURL: 'All systems red - The murderbot diaries - Martha wells.jpg'
-    },
+  {
+      nombre: 'All Systems Red',
+      precio:100,
+      CopiasEnCarro:0,
+      imagenURL: 'All systems red - The murderbot diaries - Martha wells.jpg'
+  },
 
-    {
-        nombre:'Kings of the wyld',
-        precio:200,
-        CopiasEnCarro:0,
-        imagenURL: 'Kings of the wyld - Nicholas eames.jpg'
-    },
+  {
+      nombre:'Kings of the wyld',
+      precio:200,
+      CopiasEnCarro:0,
+      imagenURL: 'Kings of the wyld - Nicholas eames.jpg'
+  },
 
-    {
-        nombre:'Clockwork boys',
-        precio:300,
-        CopiasEnCarro:0,
-        imagenURL: 'Clockwork boys - Clocktaur war - T.Kingfisher.jpg'
-    },
+  {
+      nombre:'Clockwork boys',
+      precio:300,
+      CopiasEnCarro:0,
+      imagenURL: 'Clockwork boys - Clocktaur war - T.Kingfisher.jpg'
+  },
 
-    {
-        nombre:'StormFront',
-        precio:400,
-        CopiasEnCarro:0,
-        imagenURL: 'StormFront - Dresden files - Jim butcher.jpg'
-    },
+  {
+      nombre:'StormFront',
+      precio:400,
+      CopiasEnCarro:0,
+      imagenURL: 'StormFront - Dresden files - Jim butcher.jpg'
+  },
 
-    {
-        nombre:'The Way of Kings',
-        precio:500,
-        CopiasEnCarro:0,
-        imagenURL: 'The Way of Kings - Stormlight Archive - Brandon Sanderson.jpg'
-    },
+  {
+      nombre:'The Way of Kings',
+      precio:500,
+      CopiasEnCarro:0,
+      imagenURL: 'The Way of Kings - Stormlight Archive - Brandon Sanderson.jpg'
+  },
 
-    {
-        nombre:'Warbreaker',
-        precio:600,
-        CopiasEnCarro:0,
-        imagenURL: 'Warbreaker - Brandon sanderson.jpg'
-    },
+  {
+      nombre:'Warbreaker',
+      precio:600,
+      CopiasEnCarro:0,
+      imagenURL: 'Warbreaker - Brandon sanderson.jpg'
+  },
+  {
+    nombre: 'Escuadron',
+    precio:700,
+    CopiasEnCarro:0,
+    imagenURL: 'Escuadron - Brandon Sanderson.jpg'
+},
+ {
+    nombre: 'Harry Potter',
+    precio:800,
+    CopiasEnCarro:0,
+    imagenURL: 'Harry Potter - J.K Rowling.jpg'
+},
+  {
+    nombre: 'Juego de Tronos',
+    precio:900,
+    CopiasEnCarro:0,
+    imagenURL: 'Juego de Tronos - George R.R Martin.jpg'
+},
+  {
+    nombre: 'Juramentada',
+    precio:1000,
+    CopiasEnCarro:0,
+    imagenURL: 'Juramentada - Brandon Sanderson.jpg'
+},
+  {
+    nombre: 'Palabras Radiantes',
+    precio:1100,
+    CopiasEnCarro:0,
+    imagenURL: 'Palabras Radiantes - Brandon Sanderson.jpg'
+},
+  {
+    nombre: 'Paladin`s Grace',
+    precio:1200,
+    CopiasEnCarro:0,
+    imagenURL: "Paladin's Grace - T.Kingfisher.jpg"
+},
 ];
+  
+  let productoTarjetas = {...Productos};
+  let productoContenedor = document.querySelector(".Container1Tienda");
+
+    productoContenedor.innerHTML = '';
+    Object.values(productoTarjetas).map(item => {
+
+      productoContenedor.innerHTML += `
+
+      <div class="Producto"> 
+            
+      <div class="ProductoTitulo"><P>${item.nombre}</P></div>
+      
+      <div class="ImgProducto">
+          <img src="../front-covers/${item.imagenURL}"> 
+      </div>
+
+      <div class="DetallesProducto">
+          <div class="PrecioProducto"><p><span>${item.precio}</span>$</p></div>
+          <div class="AgregarProducto"><button class="AgregarCarro AgregarCarroJS"><img src="../img/icons/Cart.png"></button></div>
+      </div>
+
+      </div>
+
+        `;
+    });
+
+let Carro = document.querySelectorAll(".AgregarCarroJS");
+console.log(Carro);
+
 
 for(let i=0;i<Carro.length;i++)
 {
     Carro[i].addEventListener('click', ()=>{
         CostoTotal(Productos[i]);
-        CantidadCarro(Productos[i]);
+        CantidadCarro();
         MostrarProductosEnCarro(Productos[i]);
     })    
 };
@@ -69,7 +132,7 @@ function CostoTotal(producto) {
 
 /* Funcion que suma la cantidad total de todos los productos agregados al carro en la seccion de la tienda*/  
 
-function CantidadCarro(cantidad) {
+function CantidadCarro() {
 
   let CantidadEnCarro=localStorage.getItem('CantidadCarro');
 
@@ -117,6 +180,7 @@ function MostrarProductosEnCarro(MostrarCarro) {
 
 function MostrarEnCarro() {
   let ItemsEnCarro = localStorage.getItem("ProductosEnCarro");
+  console.log(...Productos);
   ItemsEnCarro = JSON.parse(ItemsEnCarro);
   let ContenedorDeProductos = document.querySelector(".CarroProducto");
 
@@ -149,6 +213,8 @@ function MostrarEnCarro() {
     });
   } 
 };
+
+
 
 /* Elimina el producto del carro de compras, de la variable local de productos y refresca la pagina para mostrar el carro actualizado. */
 
@@ -234,22 +300,6 @@ function MostrarTotal(){
   document.getElementById('CosteFinalTotal').innerHTML = TotalCosto+"$";
 };
 
-/* Funcion que muestra los productos especificados por su nombre en la barra de busqueda de la Tienda */
-
-  const BarraBusqueda = document.querySelector('.BarraProducto');
-  const ProductosDivs = document.querySelectorAll('.ProductoTitulo p:nth-child(1)');
-  const ProductosArrays = Array.prototype.slice.call(ProductosDivs);
-
-  function Buscar(b){
-    ProductosArrays.forEach((item,index) => {
-      if(!item.innerHTML.toLowerCase().includes(b.target.value)){
-        item.parentElement.parentElement.style.display = 'none';
-      }else {
-        item.parentElement.parentElement.style.display = 'block';
-      }
-    })
-  };
-  BarraBusqueda.addEventListener("keyup", Buscar);   
 
 /* Funcion que muestra las unidades en el carrito de compras de la navbar en las distintas secciones de la pagina */
 
@@ -257,6 +307,8 @@ function MostrarCarro(){
     ProCont = window.localStorage.getItem('CantidadCarro'); 
     document.getElementById('CartCont').innerHTML = ProCont;
 };
+
+
 
 /* No quise desarrollar mucho la explicacion de las funciones del codigo para no hacerlo muy pesado y dificil de leer, si se me es
  requerido para la proxima entrega podria anexar un documento explicando en profundidad como funcionan las mismas, Gracias! */

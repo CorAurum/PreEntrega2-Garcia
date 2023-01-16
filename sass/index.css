@@ -102,7 +102,7 @@ body {
   grid-template-columns: 33% 33% 33%;
   background-color: none;
   width: 90%;
-  height: 100em;
+  height: auto;
   margin-top: 2em;
   overflow: hidden;
 }
