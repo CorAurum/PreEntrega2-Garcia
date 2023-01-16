@@ -8,9 +8,11 @@ function Buscar(b){
   ProductosArrays.forEach((item,index) => {
     if(!item.innerHTML.toLowerCase().includes(b.target.value)){
       item.parentElement.parentElement.style.display = 'none';
-    }else {
+    } else {
       item.parentElement.parentElement.style.display = 'block';
     }
   })
 };
 BarraBusqueda.addEventListener("keyup", Buscar);   
+
+

@@ -214,8 +214,6 @@ function MostrarEnCarro() {
   } 
 };
 
-
-
 /* Elimina el producto del carro de compras, de la variable local de productos y refresca la pagina para mostrar el carro actualizado. */
 
 function BorrarProducto() {
@@ -307,8 +305,6 @@ function MostrarCarro(){
     ProCont = window.localStorage.getItem('CantidadCarro'); 
     document.getElementById('CartCont').innerHTML = ProCont;
 };
-
-
 
 /* No quise desarrollar mucho la explicacion de las funciones del codigo para no hacerlo muy pesado y dificil de leer, si se me es
  requerido para la proxima entrega podria anexar un documento explicando en profundidad como funcionan las mismas, Gracias! */

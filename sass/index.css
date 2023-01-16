@@ -103,6 +103,7 @@ body {
   background-color: none;
   width: 90%;
   height: auto;
+  min-height: 30em;
   margin-top: 2em;
   overflow: hidden;
 }
