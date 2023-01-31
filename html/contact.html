@@ -37,25 +37,25 @@
                 
 
 <!-- Formulario De Contacto----------------------------------------------------------------------------------------------------------->                
-                <div class="ConForm">
+        <div class="ConForm">
 
-                    <form class="ConFormFields" action="https://formsubmit.co/740d68aa3ce764d25e54e7da5b843b56" method="POST">
+            <form class="ConFormFields" action="https://formsubmit.co/740d68aa3ce764d25e54e7da5b843b56" method="POST">
+        
+                <input  class="TextInput" type="Email" name="Email"  placeholder="  Email" required
+                    oninvalid="this.setCustomValidity('Porfavor ingrese un email')"
+                    oninput="this.setCustomValidity('')" maxlength="100"><br>
+
+                <input class="TextInput" type="text" name="Asunto" placeholder="  Asunto" required
+                    oninvalid="this.setCustomValidity('Porfavor ingrese el asunto de su mensaje')"
+                    oninput="this.setCustomValidity('')" maxlength="300"><br>
                 
-                        <input  class="TextInput" type="Email" name="Email"  placeholder="  Email" required
-                            oninvalid="this.setCustomValidity('Porfavor ingrese un email')"
-                            oninput="this.setCustomValidity('')" maxlength="100"><br>
-        
-                       <input class="TextInput" type="text" name="Asunto" placeholder="  Asunto" required
-                            oninvalid="this.setCustomValidity('Porfavor ingrese el asunto de su mensaje')"
-                            oninput="this.setCustomValidity('')" maxlength="300"><br>
-                        
-                        <textarea rows="7" cols="auto" name="Mensaje" placeholder=" Porfavor, ingrese su mensaje. " required 
-                            oninvalid="this.setCustomValidity('Porfavor, ingrese su mensaje.')"
-                            oninput="this.setCustomValidity('')" maxlength="2000"></textarea> <br>
-                        <input class="SubmitButton" type="submit" value="Enviar">        
-        
-                    </form>
-                  </div>
+                <textarea rows="7" cols="auto" name="Mensaje" placeholder=" Porfavor, ingrese su mensaje. " required 
+                    oninvalid="this.setCustomValidity('Porfavor, ingrese su mensaje.')"
+                    oninput="this.setCustomValidity('')" maxlength="2000"></textarea> <br>
+                <input class="SubmitButton" type="submit" value="Enviar">        
+
+            </form>
+            </div>
 <!-- Fin del Formulario De Contacto--------------------------------------------------------------------------------------------------->                   
 
             </div>
@@ -65,7 +65,7 @@
             </div>
 
 <!-- Footer -------------------------------------------------------------------------------------------------------------------------->               
-<script src="../js/Carrito.js"></script>
+
 <div class="footer">
 
     <div class="FooterSec1">
@@ -76,27 +76,24 @@
     </div>
 
     <div class="FooterSec2">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2314.330444392965!2d-56.152372087918614!3d-34.882413461800304!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x959f80f0e81877bb%3A0xe4f9d11845494ca4!2sLibrer%C3%ADa%20Pocho!5e0!3m2!1ses-419!2suy!4v1671052055632!5m2!1ses-419!2suy"
-       width="350" height="200" style="border:0;" 
-      allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2314.330444392965!2d-56.152372087918614!3d-34.882413461800304!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x959f80f0e81877bb%3A0xe4f9d11845494ca4!2sLibrer%C3%ADa%20Pocho!5e0!3m2!1ses-419!2suy!4v1671052055632!5m2!1ses-419!2suy"
+        width="350" height="200" style="border:0;" 
+        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>    
     
     <div class="FooterSec3">
       <div class="SocialIcons">
         <ul>
- <li><a href="https://www.facebook.com"><img src="../img/icons/facebook icon.png"></a></li>
-                        <li><a href="https://www.twitter.com"><img src="../img/icons/twitter icon.png"></a></li>
-                        <li><a href="https://www.instagram.com"><img src="../img/icons/instagram icon.png"></a></li>
+            <li><a href="https://www.facebook.com"><img src="../img/icons/facebook icon.png"></a></li>
+            <li><a href="https://www.twitter.com"><img src="../img/icons/twitter icon.png"></a></li>
+            <li><a href="https://www.instagram.com"><img src="../img/icons/instagram icon.png"></a></li>
         </ul>
       </div>
     </div>    
 
 </div>
-<!-- Fin Footer --------------------------------------------------------------------------------------------------------------------------> 
-
-            
+<!-- Fin Footer -------------------------------------------------------------------------------------------------------------------------->      
         </div>
-
+        <script src="../js/Carrito.js"></script>
     </body>
-
 </html>

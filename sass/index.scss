@@ -243,7 +243,7 @@ body{
     }
 
     h5{
-        width: 60%;
+        width: 50%;
         margin: auto;
         margin-top: 2em;
     }
@@ -334,7 +334,9 @@ body{
 }
 
 .CosteFinalCarro {
-    margin:auto;
+    margin: auto;
+    margin-top:auto;
+    margin-bottom: 2em;
     width: 100%;
     p {
         text-align: center;
@@ -401,8 +403,32 @@ button {
 }
 }
 
+.FinalizarCompra {
+    grid-area: left;
+  grid-column: 2 / 2;
+  button{
+    height: 3em;
+    border-radius: 15px;
+    background-color: rgb(218, 218, 218);
+    color: #2e353d;
+  }
+}
 
 /* End Cart Section */
+
+/* Payment Section */
+
+.Container1Payment {
+    justify-content: center;
+    min-height: 35em;
+    display: grid;
+    grid-template-columns: 40% 40%;
+    margin: auto;
+    margin-top: 5em;
+}
+
+
+/* End Payment Section */
 
 /*Footer Section*/
 

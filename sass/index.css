@@ -228,7 +228,7 @@ body {
   margin-top: 0.2em;
 }
 .Container1about h5 {
-  width: 60%;
+  width: 50%;
   margin: auto;
   margin-top: 2em;
 }
@@ -309,6 +309,8 @@ body {
 
 .CosteFinalCarro {
   margin: auto;
+  margin-top: auto;
+  margin-bottom: 2em;
   width: 100%;
 }
 .CosteFinalCarro p {
@@ -373,7 +375,29 @@ body {
   margin-left: 85%;
 }
 
+.FinalizarCompra {
+  grid-area: left;
+  grid-column: 2/2;
+}
+.FinalizarCompra button {
+  height: 3em;
+  border-radius: 15px;
+  background-color: rgb(218, 218, 218);
+  color: #2e353d;
+}
+
 /* End Cart Section */
+/* Payment Section */
+.Container1Payment {
+  justify-content: center;
+  min-height: 35em;
+  display: grid;
+  grid-template-columns: 40% 40%;
+  margin: auto;
+  margin-top: 5em;
+}
+
+/* End Payment Section */
 /*Footer Section*/
 .FooterSec1 {
   @import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
