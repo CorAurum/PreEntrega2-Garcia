@@ -419,12 +419,28 @@ button {
 /* Payment Section */
 
 .Container1Payment {
+    background-color: rgb(211, 211, 211, .3);
+    width: 80%;
     justify-content: center;
     min-height: 35em;
     display: grid;
     grid-template-columns: 30% 30%;
     margin: auto;
-    margin-top: 5em;
+    margin-top: 3em;
+    div{
+        margin-top: 2em;
+        .SubmitButton{
+            font-family: 'Times New Roman', Times, serif;
+            background-color: rgb(185, 255, 192);
+            border-radius: 10%;
+            border: solid black 1px;
+        }
+        p{  
+            font-family:'Times New Roman', Times, serif;
+            margin-top: 0.5em;
+            font-size: 1em;
+        }
+    }
 }
 
 /* End Payment Section */
