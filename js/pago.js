@@ -19,9 +19,9 @@ function sweet() {
         confirmButtonColor: "rgb(40, 192, 78)",
         
       }).then(function() {
-        window.location = "../index.html";
-    }); 
-}
+        localStorage.clear();
+    }).then(function() { window.location = "../index.html";  })
+};
 
 function pago() {
 
@@ -32,4 +32,5 @@ function pago() {
             localStorage.setItem(DatosdePago[i], lista[i].value);          
  } }
  sweet(); 
+
 }
