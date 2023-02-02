@@ -1,6 +1,6 @@
 /* Funcion que muestra los productos especificados por su nombre en la barra de busqueda de la Tienda */
-
-const BarraBusqueda = document.querySelector(".BarraProducto");
+setTimeout(() => {
+  const BarraBusqueda = document.querySelector(".BarraProducto");
 const ProductosDivs = document.querySelectorAll(
   ".ProductoTitulo p:nth-child(1)"
 );
@@ -16,3 +16,5 @@ function Buscar(b) {
   });
 }
 BarraBusqueda.addEventListener("keyup", Buscar);
+}, "300");
+

@@ -28,40 +28,44 @@
 </nav>
 <!--- Fin Barra de navegacion Bootstrap  ------------------------------------------------------------------------------------------------->        
 
-        <div class="PageContainer">
-            
-
-            <div class="Container1Payment">              
-             
-                <form onsubmit="pago();">
-                    <div class="PaymentInformacionPersonal">
-                        <p>Nombre Completo</p>
-                        <input required oninvalid="this.setCustomValidity('Porfavor ingrese su nombre')" type="textfield" onchange="this.setCustomValidity('')">
-                        <p>Email</p>
-                        <input  required oninvalid="this.setCustomValidity('Porfavor ingrese un email')" type="email" name="email" onchange="this.setCustomValidity('')">
-                        <p>Direccion</p>
-                        <input  required oninvalid="this.setCustomValidity('Porfavor ingrese su Direccion')" type="text" onchange="this.setCustomValidity('')">
-                        <p>Codigo Postal</p>
-                        <input required oninvalid="this.setCustomValidity('Porfavor ingrese su Codigo Postal')"  type="text" onchange="this.setCustomValidity('')">
-                        <p>Mensaje Opcional</p>
-                        <textarea style="resize: none;"></textarea>
+<div class="PageContainer">
     
-                  
-                        <p>Numero de Tarjeta</p>
-                        <input required oninvalid="this.setCustomValidity('Numero de Tarjeta Invalido')" type="number" onchange="this.setCustomValidity('')">
-                        <p>Codigo de Seguridad</p>
-                        <input type="text" required oninvalid="this.setCustomValidity('Codigo de Seguridad Invalido')" onchange="this.setCustomValidity('')">
-                        <p> Fecha de vencimiento </p>
-                        <input required oninvalid="this.setCustomValidity('Fecha de Vencimiento Invalida')" type="number" min="1" max="12" onchange="this.setCustomValidity('')">
-                        <input required oninvalid="this.setCustomValidity('Fecha de Vencimiento Invalida')" type="number" min="1" max="99" onchange="this.setCustomValidity('')">
-                        <input type="submit" value="Enviar">
-                    </div>
-                    <button onclick="sweet();">A</button>
-                </form>
-
+        <form onsubmit="pago();return false">
+            <div class="Container1Payment"> 
+                <div>   
+                <p>Nombre Completo</p>
+                <input required oninvalid="this.setCustomValidity('Porfavor ingrese su nombre')" type="textfield" onchange="this.setCustomValidity('')">
+                <p>Email</p>
+                <input  required oninvalid="this.setCustomValidity('Porfavor ingrese un email')" type="email" name="email" onchange="this.setCustomValidity('')">
+                <p>Direccion</p>
+                <input  required oninvalid="this.setCustomValidity('Porfavor ingrese su Direccion')" type="text" onchange="this.setCustomValidity('')">
+                <p>Codigo Postal</p>
+                <input min="1000" required oninvalid="this.setCustomValidity('Porfavor ingrese su Codigo Postal')"  type="number" onchange="this.setCustomValidity('')"
+                oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="5">
+                <p>Mensaje Opcional</p>
+                <textarea style="resize: none;"></textarea>
+            </div>
+            
+            <div>
+                <p>Numero de Tarjeta</p>
+                <input min="1111111111111111" required oninvalid="this.setCustomValidity('Numero de Tarjeta Invalido')" type="number" onchange="this.setCustomValidity('')"
+                 oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="16">
+                <p>Codigo de Seguridad</p>
+                <input min="001" minlength="3" type="number" required oninvalid="this.setCustomValidity('Codigo de Seguridad Invalido')" onchange="this.setCustomValidity('')"
+                oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="3">
+                <p> Fecha de vencimiento </p>
+                <input required oninvalid="this.setCustomValidity('Fecha de Vencimiento Invalida')" type="number" min="1" max="12" onchange="this.setCustomValidity('')"
+                oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="2">
+                <input required oninvalid="this.setCustomValidity('Fecha de Vencimiento Invalida')" type="number" min="23" max="99" onchange="this.setCustomValidity('')"
+                oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="2">
+                <input type="submit" value="Enviar">
             </div>
 
         </div>
+            <button onclick="sweet();">A</button>
+        </form>
+
+    </div>
 
 <!-- Footer -------------------------------------------------------------------------------------------------------------------------->               
 <div class="footer">
@@ -91,7 +95,7 @@
 </div>
 <!-- Fin Footer --------------------------------------------------------------------------------------------------------------------------> 
         </div>
-        <script src="../js/main.js"></script>
+        <script src="../js/Carrito.js"></script>
         <script src="../js/pago.js"></script>
         <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         <script src="sweetalert2.all.min.js"></script>
