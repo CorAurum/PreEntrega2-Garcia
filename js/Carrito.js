@@ -123,6 +123,8 @@ function MostrarCarro(){
     document.getElementById('CartCont').innerHTML = ProCont;
 };
 
+/*Funcion que inhabilita el boton de pagar en el carro en caso de no tener productos agregados al mismo */
+
 function VerificarCompra(){
         var Carro = localStorage.getItem("ProductosEnCarro");
     if( Carro == null  || Carro == "{}" ){ 
